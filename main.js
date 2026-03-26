@@ -29,7 +29,7 @@ logoRed.onmouseleave = function(){
     logoWhite.setAttribute('class','logo')
 }
 logoRed.onclick = function(){
-    location.href = 'index.html'
+    location.reload()
 }
 // scrolling Button :  
 
@@ -52,9 +52,8 @@ timeLineAbout.fromTo('#container-exp',{x:100 , opacity:0},{x:0 , opacity:1, dura
 // skills section animation
 const timeLineSkills = gsap.timeline({scrollTrigger:'#skills-title'});
 timeLineSkills.fromTo('#skills-title',{x:-100 , opacity:0},{x:0 , opacity:1, duration:1 });
-timeLineSkills.fromTo('#front-end',{y:100 , opacity:0},{y:0 , opacity:1, duration:1 },'-=0.5');
-timeLineSkills.fromTo('#back-end',{y:100 , opacity:0},{y:0 , opacity:1, duration:1 },'-=1');
-timeLineSkills.fromTo('.bar-animation',{scaleX:0},{ scaleX:1 , duration:1,transformOrigin:'left'})
+timeLineSkills.fromTo('#container-svg-python , #container-svg-js , #container-svg-react , #container-svg-mongo , #container-svg-git',{y:-30 , opacity:0},{y:0 , opacity:1 , duration:0.3})
+timeLineSkills.fromTo('#container-svg-django , #container-svg-css , #container-svg-threejs , #container-svg-json , #container-svg-github',{y:30 , opacity:0},{y:0 , opacity:1 , duration:0.3},'-=0.3')
 // projects section animation
 const timeLineProjects = gsap.timeline({scrollTrigger:'#projects-title'});
 timeLineProjects.fromTo('#projects-title',{x:-100 , opacity:0},{x:0 , opacity:1, duration:1 });
@@ -112,7 +111,7 @@ btnSendMessage.onclick = function(){
         btnSendMessage.style.background = 'green'
         btnSendMessage.textContent = 'Sent successfuly!'
         setTimeout(function (){
-            location.href = 'index.html'
+            location.reload();
         },1000);
     }else{
         btnSendMessage.textContent = 'all fildes required'
