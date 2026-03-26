@@ -18,7 +18,6 @@ const linkedin = document.getElementById('linkedin');
 const instagram = document.getElementById('instagram');
 const tiktok = document.getElementById('tiktok');
 
-console.log('test');
 // logo button :
 
 logoWhite.onmouseenter= function(){
