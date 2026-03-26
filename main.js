@@ -50,7 +50,7 @@ timeLineAbout.fromTo('#about-text1',{x:-100 , opacity:0},{x:0 , opacity:1, durat
 timeLineAbout.fromTo('#about-text2',{x:-100 , opacity:0},{x:0 , opacity:1, duration:1 },'-=0.5');
 timeLineAbout.fromTo('#container-exp',{x:100 , opacity:0},{x:0 , opacity:1, duration:1 },'-=1');
 // skills section animation
-const timeLineSkills = gsap.timeline({scrollTrigger:'#skills-title'});
+const timeLineSkills = gsap.timeline({delay:2 ,scrollTrigger:'#skills-title'});
 timeLineSkills.fromTo('#skills-title',{x:-100 , opacity:0},{x:0 , opacity:1, duration:1 });
 timeLineSkills.fromTo('#container-svg-python , #container-svg-js , #container-svg-react , #container-svg-mongo , #container-svg-git',{y:-30 , opacity:0},{y:0 , opacity:1 , duration:0.3})
 timeLineSkills.fromTo('#container-svg-django , #container-svg-css , #container-svg-threejs , #container-svg-json , #container-svg-github',{y:30 , opacity:0},{y:0 , opacity:1 , duration:0.3},'-=0.3')
