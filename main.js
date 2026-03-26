@@ -3,6 +3,7 @@ import gsap from '/gsap/index.js';
 import ScrollTrigger from '/gsap/ScrollTrigger.js';
 gsap.registerPlugin(ScrollTrigger);
 
+
 const logoWhite = document.getElementById('logo-white');
 const logoRed = document.getElementById('logo-red');
 const btnGoBack = document.getElementById('btn-go-back');
@@ -80,12 +81,12 @@ tiktok.onclick = function(){window.open('https://www.tiktok.com/@asura_dev','_bl
 
 async function sendMessage (text){
     try{
-        const respond = await fetch('https://api.telegram.org/bot8692987809:AAHT0EiA6hB4g2v6Pk1ThKimEBNv_-0YmVo/sendMessage',
+        const respond = await fetch(`./telegram.php`,
             {
                 method:'POST',
                 headers:{
                     'content-Type':'application/json'
-                },
+                },  
                 body:JSON.stringify({
                     chat_id:1098390817,
                     text:text,
