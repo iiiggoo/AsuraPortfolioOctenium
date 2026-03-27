@@ -344,12 +344,13 @@ a {
     gap: 2%;
 }
 .project-window-img{
-    width: 27vw;
+    width: 25vw;
 }
 .project-window-text{
     display: flex;
     flex-direction: column;
     justify-content: start;
+    width: 48vw;
 }
 .project-window-title{
     font-size: 2.8vw;
