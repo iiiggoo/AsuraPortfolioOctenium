@@ -342,9 +342,10 @@ a {
     border: 2px solid #ffffff75;
     border-radius: 20px;
     gap: 2%;
+    overflow-x: hidden;
 }
 .project-window-img{
-    width: 25vw;
+    width: 5vw;
 }
 .project-window-text{
     display: flex;
