@@ -71,7 +71,7 @@ timeLineContact.fromTo('#my-location',{x:-100 , opacity:0},{x:0 , opacity:1 , du
 timeLineContact.fromTo('#contact-form',{scaleX:0 , opacity:0},{scaleX:1 ,opacity:1, duration:1},'-=1.5');
 timeLineContact.from('#github-social-media-icon,#linkedin-social-media-icon,#instagram-social-media-icon,#tiktok-social-media-icon',{y:10 ,duration:1,opacity:0 },'-=0.5');
 
-// project hover : 
+// project hover :
 function projectImgHover (seemore,Filter,containerimg){
     const seeMore = document.getElementById(seemore);
     const filter = document.getElementById(Filter);
@@ -93,7 +93,7 @@ projectImgHover('see-more3','filter3','container-project-img-3');
 
 
 // email and phone click call : 
-myEmail.onclick = function (){location.href = 'mailto:benaichhamed@gmail.com'};
+myEmail.onclick = function (){location.href = 'mailto:asura@asura-portfolio.com'};
 myPhone.onclick = function (){location.href = 'tel:+213660361580'};
 
 
@@ -172,7 +172,7 @@ function theMessage(name,email,message){
     return textMessage;
 }
 
-btnSendMessage.onclick = function(){        window.className = 'project-window';
+btnSendMessage.onclick = function(){
     if(inpName.value != '' && inpEmail.value != '' && inpMessage.value != ''){
         sendMessage(theMessage(inpName.value , inpEmail.value , inpMessage.value));
         inpName.value = '';
