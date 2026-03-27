@@ -55,8 +55,8 @@ timeLineAbout.fromTo('#container-exp',{x:100 , opacity:0},{x:0 , opacity:1, dura
 // skills section animation
 const timeLineSkills = gsap.timeline({scrollTrigger:'#skills-title'});
 timeLineSkills.fromTo('#skills-title',{x:-100 , opacity:0},{x:0 , opacity:1, duration:1 });
-timeLineSkills.fromTo('#container-svg-python , #container-svg-js , #container-svg-react , #container-svg-mongo , #container-svg-git',{y:-30 , opacity:0},{y:0 , opacity:1 , duration:0.3},'-=0.5')
-timeLineSkills.fromTo('#container-svg-django , #container-svg-css , #container-svg-threejs , #container-svg-json , #container-svg-github',{y:30 , opacity:0},{y:0 , opacity:1 , duration:0.3},'-=0.3')
+timeLineSkills.fromTo('#container-svg-python , #container-svg-js , #container-svg-react , #container-svg-mongo , #container-svg-git',{y:-30 , opacity:0},{y:0 , opacity:1 , duration:0.3},'-=0.5');
+timeLineSkills.fromTo('#container-svg-django , #container-svg-css , #container-svg-threejs , #container-svg-json , #container-svg-github',{y:30 , opacity:0},{y:0 , opacity:1 , duration:0.3},'-=0.3');
 // projects section animation
 const timeLineProjects = gsap.timeline({scrollTrigger:'#projects-title'});
 timeLineProjects.fromTo('#projects-title',{x:-100 , opacity:0},{x:0 , opacity:1, duration:1 });
@@ -66,10 +66,12 @@ timeLineProjects.fromTo('#projects-3',{y:100 , opacity:0},{y:0 , opacity:1 ,dura
 // contact section animation
 const timeLineContact = gsap.timeline({scrollTrigger:'#contact'});
 timeLineContact.fromTo('#my-email',{x:-100 , opacity:0},{x:0 , opacity:1 , duration:1})
-timeLineContact.fromTo('#my-location',{x:-100 , opacity:0},{x:0 , opacity:1 , duration:1},'-=0.5')
-timeLineContact.fromTo('#contact-form',{scaleX:0 , opacity:0},{scaleX:1 ,opacity:1, duration:1},'-=1.5')
+timeLineContact.fromTo('#my-phone',{x:-100 , opacity:0},{x:0 , opacity:1 , duration:1},'-=0.5');
+timeLineContact.fromTo('#my-location',{x:-100 , opacity:0},{x:0 , opacity:1 , duration:1},'-=0.5');
+timeLineContact.fromTo('#contact-form',{scaleX:0 , opacity:0},{scaleX:1 ,opacity:1, duration:1},'-=1.5');
+timeLineContact.from('#github-social-media-icon,#linkedin-social-media-icon,#instagram-social-media-icon,#tiktok-social-media-icon',{y:10 ,duration:1,opacity:0 },'-=0.5');
 
-
+// project hover : 
 function projectImgHover (seemore,Filter,containerimg){
     const seeMore = document.getElementById(seemore);
     const filter = document.getElementById(Filter);
@@ -90,7 +92,7 @@ projectImgHover('see-more3','filter3','container-project-img-3');
 
 
 
-
+// email and phone click call : 
 myEmail.onclick = function (){location.href = 'mailto:benaichhamed@gmail.com'};
 myPhone.onclick = function (){location.href = 'tel:+213660361580'};
 
