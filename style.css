@@ -84,7 +84,7 @@ a {
     box-shadow:1px 10px 30px black;
 }
 .logo{
-    width: 9%;
+    width: 6vw;
 }
 .navLinks {
     display: flex;
@@ -92,7 +92,7 @@ a {
     font-weight: lighter;
     font-style: normal;
     margin-right: 40%;
-    font-size: 20px;
+    font-size: 1vw;
 }
 .navLinks li{
     transition: all 0.2s;
@@ -113,29 +113,29 @@ a {
     position: relative;
 }
 .hero-img{
-    width: 100%;
+    width: 99.2vw;
 }
 .hero-img-phone{
     display: none;
 }
 .hero-writing{
     position:absolute;
-    margin-top: 20%;
-    margin-left:5%;
+    margin-top: 17vw;
+    margin-left:5vw;
     font-family: var(--font);
     font-weight: bold;
     z-index: 1;
 }
 .hero h1{
-    font-size: 1500%;
+    font-size: 11vw;
     font-weight: bolder;
 }
 .hero p{
-    font-size:40px;
+    font-size:3vw;
 }
 
 .about{
-    font-size: 24px;
+    font-size: 1.3vw;
     margin-top: 15%;
     margin-left: 15%;
     display: flex;
@@ -143,25 +143,24 @@ a {
     align-items: center;
 }
 .about-title{
-    font-size: 55px;
+    font-size: 3.3vw;
     margin-bottom: 7%;
     font-weight: bold;
 }
 .container-who{
-    width: 50%;
+    width: 45vw;
     margin-right:5%;
 }
 .container-who p:nth-child(2){
-    font-size:35px;
+    font-size:2vw;
     margin-bottom: 4%;
 }
 .container-who p:nth-child(3){
     color: #ffffffcb;
 }
 .container-exp-5y , .container-exp-40p{
-    padding-left: 30%;
-    padding-right: 30%;
-    padding-bottom: 10%;
+    width: 10vw;
+    height: 6vw;
     margin-bottom: 10%;
     border-radius: 10px;
     display: flex;
@@ -170,35 +169,34 @@ a {
     background: #acacac1e;
 }
 .container-exp-5y p:nth-child(1) , .container-exp-40p p:nth-child(1) {
-    font-size: 50px;
+    font-size: 3vw;
     font-weight: bold;
 }
 .container-exp-5y p:nth-child(2) , .container-exp-40p p:nth-child(2) {
-    font-size: 15px;
+    font-size: 0.7vw;
     font-weight: 100;
 }
 .skills{
     display: flex;
     flex-direction: column;
-    font-size: 24px;
+    font-size: 1.3vw;
     margin-top: 15%;
     padding-left: 15%;
-    margin-right: 20%;
 }
 .container-skills{
     display:grid;
-    grid-template-columns: repeat(5,1fr);
-    gap:30px;
+    grid-template-columns: repeat(5,12vw);
+    gap:20px;
 }
 .skills-title{
-    font-size: 55px;
+    font-size: 3.3vw;
     margin-bottom: 7%;
     font-weight: bold;
 }
 .container-svg{
     position: relative;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
 }
 .container-svg:hover{
     cursor: pointer;
@@ -209,23 +207,23 @@ a {
 }
 .svg-circle-main{
     stroke: #ffffff75;
-    stroke-width: 10px;
+    stroke-width: 0.5vw;
     stroke-dasharray: 300;
     fill: none;
 }
 .svg-circle-fill{
     stroke: white;
-    stroke-width: 10px;
+    stroke-width: 0.5vw;
     stroke-dasharray: 300;
     fill: none;
 }
 .svg-text{
     text-anchor: middle;
     fill: var(--writing-2);
-    font-size: 30px;
+    font-size: 1.5vw;
 }
 .svg-img{
-    width: 35%;
+    width: 4vw;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -267,14 +265,25 @@ a {
     margin-top:15%;
     margin-left: 15%;
 }
+.projects-title{
+    font-size: 3.3vw;
+    margin-bottom: 7%;
+    font-weight: bold;
+}
+.container-projects{
+    display: grid;
+    grid-template-columns: repeat(3,25vw);
+    margin-right: 15% ;
+}
 .container-project-img{
-    width: 100%;
-    height: 80%;
+    width: 22vw;
+    height: 22vw;
     position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 .project-img{
     width:100%;
-    height: 100%;
 }
 .container-project-img:hover{
     cursor: pointer;
@@ -294,8 +303,9 @@ a {
 .see-more{
     position: absolute;
     z-index: 30;
-    top:43%;
-    left:33%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
     color: red;
     background:#333;
     backdrop-filter: blur(10px);
@@ -303,19 +313,9 @@ a {
     padding-bottom: 20px;
     padding-left: 30px;
     padding-right: 30px;
-    font-size: 20px;
+    font-size: 1vw;
     border-radius: 40px;
     border: 1px solid red;
-}
-.projects-title{
-    font-size: 55px;
-    margin-bottom: 7%;
-    font-weight: bold;
-}
-.container-projects{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    margin-right: 15% ;
 }
 .project-window-filter{
     position: fixed;
@@ -337,11 +337,14 @@ a {
     top:20%;
     left: 10%;
     z-index: 9998;
-    width: 80%;
-    height: 60%;
+    width: 80vw;
+    height: 30vw;
     border: 2px solid #ffffff75;
     border-radius: 20px;
     gap: 2%;
+}
+.project-window-img{
+    width: 27vw;
 }
 .project-window-text{
     display: flex;
@@ -349,17 +352,18 @@ a {
     justify-content: start;
 }
 .project-window-title{
-    font-size: 54px;
+    font-size: 2.8vw;
     font-weight: bold;
 }
 .project-window-description{
-    font-size: 23px;
+    font-size: 1.16vw;
+    margin-top:1vw;
 }
 .project-window-example{
     display: flex;
     flex-direction: row;
-    gap:2%;
-    margin-top: 2%;
+    gap:1vw;
+    margin-top: 1vw;
     overflow-x: hidden;
 }
 .project-example{
@@ -425,22 +429,18 @@ a {
     color: var(--writing-1);
 }
 .contact{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2,40vw);
     margin-top:15%;
     margin-left: 15%;
     margin-bottom: 10%;
 }
-
 .contact-form{
     display: flex;
     flex-direction: column;
     padding: 5%;
-    margin-right: 15%;
-    width: 100%;
-    height: 100%;
+    width: 34vw;
+    height: 30vw;
     background: #acacac1e;
 }
 .contact-form input {
@@ -489,20 +489,20 @@ a {
 .contact-info{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap:1vw;
 }
 .contact-info-me{
-    font-size: 40px;
+    font-size: 2.4vw;
+    width: 70%;
     font-weight: bold;
 }
 .contact-info-title{
-    font-size: 18px;
+    font-size: 1.5vw;
     font-weight: 200;
     color: #ffffff75;
 }
 .contact-info-content{
-    font-size: 30px;
-    border-radius: 5px;
+    font-size: 2vw;
 }
 .contact-info-content-link{
     transition: all 0.2s;
@@ -513,18 +513,15 @@ a {
 }
 .social-media{
     display: grid;
-    grid-template-columns: repeat(4,7%);
+    grid-template-columns: repeat(4,2.5vw);
     gap: 6%;
-    margin-top: 5%;
 }
 .container-social-media-img:hover{
     cursor: pointer;
 }
 .social-media-img{
-    width: 100%;
+    width: 2.8vw;
     opacity: 0.8;
-    border-radius: 100px;
-    padding: 0%;
 }
 .footer-data{
     border-top: 1px solid #ffffff75;
