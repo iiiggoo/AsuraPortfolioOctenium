@@ -31,6 +31,9 @@ logoRed.onmouseleave = function(){
 logoRed.onclick = function(){
     location.reload()
 }
+
+
+
 // scrolling Button :  
 
 onscroll = function(){
@@ -67,14 +70,79 @@ timeLineContact.fromTo('#my-location',{x:-100 , opacity:0},{x:0 , opacity:1 , du
 timeLineContact.fromTo('#contact-form',{scaleX:0 , opacity:0},{scaleX:1 ,opacity:1, duration:1},'-=1.5')
 
 
+function projectImgHover (seemore,Filter,containerimg){
+    const seeMore = document.getElementById(seemore);
+    const filter = document.getElementById(Filter);
+    const containerImg = document.getElementById(containerimg)
+    containerImg.onmouseenter = function(){
+        seeMore.setAttribute('class','see-more');
+        filter.setAttribute('class','filter');
+
+    };
+    containerImg.onmouseleave = function(){
+        seeMore.setAttribute('class','hide');
+        filter.setAttribute('class','hide');
+    };
+}
+projectImgHover('see-more1','filter1','container-project-img-1');
+projectImgHover('see-more2','filter2','container-project-img-2');
+projectImgHover('see-more3','filter3','container-project-img-3');
+
+
+
 
 myEmail.onclick = function (){location.href = 'mailto:benaichhamed@gmail.com'};
 myPhone.onclick = function (){location.href = 'tel:+213660361580'};
+
+
 // social media buttons :
-github.onclick = function(){window.open('https://github.com/iiiggoo','_blank')};
-linkedin.onclick = function(){window.open('','_blank')};
-instagram.onclick = function(){window.open('https://www.instagram.com/iiig_goo','_blank')};
-tiktok.onclick = function(){window.open('https://www.tiktok.com/@asura_dev','_blank')};
+function socialMediaHover(containerImg,imgWhite,imgRed,link){
+    const container = document.getElementById(containerImg);
+    const whiteIcon = document.getElementById(imgWhite);
+    const redIcon = document.getElementById(imgRed);
+    container.onmouseenter = function (){
+        whiteIcon.className = 'hide';
+        redIcon.className = 'social-media-img';
+    }
+    container.onmouseleave = function (){
+        redIcon.className = 'hide';
+        whiteIcon.className = 'social-media-img';
+    }
+    container.onclick = function(){window.open(`${link}`,'_blank')};
+}
+socialMediaHover('github-social-media-icon','github-white','github-red','https://github.com/iiiggoo')
+socialMediaHover('linkedin-social-media-icon','linkedin-white','linkedin-red','https://github.com/iiiggoo')
+socialMediaHover('instagram-social-media-icon','instagram-white','instagram-red','https://www.instagram.com/iiig_goo')
+socialMediaHover('tiktok-social-media-icon','tiktok-white','tiktok-red','https://www.tiktok.com/@asura_dev')
+
+// projects galery : 
+function projectClick (imgContainer,projectWindow,windowFilter,btnX){
+    const container = document.getElementById(imgContainer);
+    const window = document.getElementById(projectWindow);
+    const filter = document.getElementById(windowFilter);
+    const x = document.getElementById(btnX);
+
+    container.onclick = function(){
+        filter.className = 'project-window-filter';
+        gsap.from(window,{
+            scaleX:0.9,
+            duration:1,
+            opacity:0,
+        })
+        window.className = 'project-window';
+    };
+    x.onclick = function (){
+        window.className = 'hide';
+        filter.className = 'hide';
+    };
+    filter.onclick = function(){
+        window.className = 'hide';
+        filter.className = 'hide';        
+    };
+}
+projectClick('container-project-img-1','project-1-window','window-filter-1','btn-x-1');
+projectClick('container-project-img-2','project-2-window','window-filter-2','btn-x-2');
+projectClick('container-project-img-3','project-3-window','window-filter-3','btn-x-3');
 
 // meesage handling : 
 
@@ -102,7 +170,7 @@ function theMessage(name,email,message){
     return textMessage;
 }
 
-btnSendMessage.onclick = function(){
+btnSendMessage.onclick = function(){        window.className = 'project-window';
     if(inpName.value != '' && inpEmail.value != '' && inpMessage.value != ''){
         sendMessage(theMessage(inpName.value , inpEmail.value , inpMessage.value));
         inpName.value = '';
