@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Asura - Full Stack Web Developer based in Batna, Algeria. I build stunning animated portfolio websites using HTML, CSS, JavaScript and GSAP.">
     <meta name="keywords" content="web developer, portfolio, GSAP animations, frontend developer,full stack developer,backend developer,web designer, Algeria, Batna, Benaicha Hamed">
     <meta name="author" content="Benaicha Hamed">
@@ -15,321 +15,352 @@
 </head>
 <body>
     <div class="noise"></div>
-    <nav id="navBar" class="navBar">
+    <div id="navBar" class="navBar">
         <img id="logo-white" class="logo" src="logo1.png" >
         <img id="logo-red" class="logo hide" src="logo2.png" >
-        <div>
-            <ul class="navLinks">
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#skills">SKILLS</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav class="navBar-hamburger">
+        <nav>
+            <div>
+                <ul class="navLinks">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
         <div class="hamburger" id="hamburger">
-            <img src="menu.png" alt="">
+            <img src="menu.png" alt="menu">
         </div>
-        <ul class="navLinks-hamburger">
-            <li><img id="logo-white-humburger" class="logo-white-humburger" src="logo1.png" ></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
-    </nav>
+    </div>
+    <div class="navBar-hamburger-filter hide"></div>
+    <div class="navBar-hamburger hide">
+        <nav>
+            <ul class="navLinks-hamburger">
+                <li>ABOUT</li>
+                <li>SKILLS</li>
+                <li>PROJECTS</li>
+                <li>CONTACT</li>
+            </ul>
+        </nav>
+        <div class="social-media-hamburger">
+            <div>
+                <img class="social-media-hamburger-img hide" src="github-red.png" alt="">
+                <img class="social-media-hamburger-img" src="github-white.png" alt="">
+            </div>
+            <div>
+                <img class="social-media-hamburger-img hide" src="linkedin-red.png" alt="">
+                <img class="social-media-hamburger-img" src="linkedin-white.png" alt="">
+            </div>
+            <div>
+                <img class="social-media-hamburger-img hide" src="instagram-red.png" alt="">
+                <img class="social-media-hamburger-img" src="instagram-white.png" alt="">
+            </div>
+            <div>
+                <img class="social-media-hamburger-img hide" src="tiktok-red.png" alt="">
+                <img class="social-media-hamburger-img" src="tiktok-white.png" alt="">
+            </div>
+        </div>
+    </div>
     <div id="hero" class="hero">
-        <div class="hero-writing">
-            <h1>ASURA</h1>
-            <p>Full-Stack Web Developer</p>    
+        <div class="hero-title">
+            <div class="hero-writing">
+                <h1>ASURA</h1>
+                <p>FULL STACK WEB DEVELOPER</p>
+            </div>
+            <div class="btn-hero">
+                    <p>CONTACT ME</p>
+            </div>  
         </div>
-        <img id="hero-img-phone" class="hero-img-phone" src="heroo.jpg" alt="">    
-        <img id="hero-img" class="hero-img" src="hero1.png" alt="portfolio picture">
+        <div class="container-hero-img">
+            <img id="hero-img-phone" class="hero-img-phone" src="hero-phone.png" alt="">    
+            <img id="hero-img" class="hero-img" src="hero1.png" alt="portfolio picture">
+        </div>
     </div>
     <div>
         <button id="btn-go-back" class="go-back hide">↑</button>
     </div>
-    <div id="about" class="about">
-        <div class="container-who">
-            <p id="about-title" class="about-title">WHO AM I</p>
-            <p id="about-text1">I craft digital experiences with a focus on motion, aesthetics, and robust architecture.</p>
-            <p id="about-text2">I am Benaicha Hamed, a Senior Full-Stack Developer based in Batna, Algeria, born on September 15, 2003. My background includes over four years of professional experience that strengthened my problem-solving mindset and attention to detail, which I now apply fully to software development. I specialize in building robust, scalable web applications using Python and Django on the backend, paired with clean, efficient, and interactive front-end solutions. I am passionate about Python, deeply committed to my craft, and driven by writing high-quality code, designing solid architectures, and delivering reliable systems that perform, scale, and endure in real-world environments.</p>
-        </div>
-        <div id="container-exp" class="container-exp">
-            <div class="container-exp-5y">
-                <p>5+</p>
-                <p>YEARS EXPERIENCE</p>
+    <div class="content">
+        <div id="about" class="about">
+            <div class="container-who">
+                <p id="about-title" class="about-title">WHO AM I</p>
+                <p id="about-text1">I craft digital experiences with a focus on motion, aesthetics, and robust architecture.</p>
+                <p id="about-text2">I am Benaicha Hamed, a Senior Full-Stack Developer based in Batna, Algeria, born on September 15, 2003. My background includes over four years of professional experience that strengthened my problem-solving mindset and attention to detail, which I now apply fully to software development. I specialize in building robust, scalable web applications using Python and Django on the backend, paired with clean, efficient, and interactive front-end solutions. I am passionate about Python, deeply committed to my craft, and driven by writing high-quality code, designing solid architectures, and delivering reliable systems that perform, scale, and endure in real-world environments.</p>
             </div>
-            <div class="container-exp-40p">
-                <P>40+</P>
-                <P>PROJECTS COMPLETED</P>
-            </div>
-        </div>
-    </div>
-    <div id="skills" class="skills">
-        <p id="skills-title" class="skills-title">TECHNICAL PROFICIENCY</p>
-        <div class="container-skills" >
-            <div class="container-svg" id="container-svg-python">
-                <svg id="svg-python" class="svg" viewBox="0 0 200 200">
-                    <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
-                    <circle cx="100" cy="100" r="70" class="svg-circle-fill python" transform="rotate(-35 100 100)"/>
-                    <text id="svg-text-python" class="svg-text hide" x="100" y="105">85%</text>
-                </svg>
-                <img id="svg-img-python" class="svg-img" src="python.png" alt="">
-            </div>
-            <div class="container-svg" id="container-svg-django">
-                <svg id="svg-django" class="svg" viewBox="0 0 200 200">
-                    <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
-                    <circle cx="100" cy="100" r="70" class="svg-circle-fill django" transform="rotate(-35 100 100)"/>
-                    <text id="svg-text-django" class="svg-text hide" x="100" y="105">60%</text>
-                </svg>
-                <img id="svg-img-django" class="svg-img" src="django.png" alt="">
-            </div>
-            <div class="container-svg" id="container-svg-js">
-                <svg id="svg-js" class="svg" viewBox="0 0 200 200">
-                    <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
-                    <circle cx="100" cy="100" r="70" class="svg-circle-fill js" transform="rotate(-35 100 100)"/>
-                    <text id="svg-text-js" class="svg-text hide" x="100" y="105">90%</text>
-                </svg>
-                <img id="svg-img-js" class="svg-img" src="js.png" alt="">
-            </div>
-            <div class="container-svg" id="container-svg-css">
-                <svg id="svg-css" class="svg" viewBox="0 0 200 200">
-                    <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
-                    <circle cx="100" cy="100" r="70" class="svg-circle-fill css" transform="rotate(-35 100 100)"/>
-                    <text id="svg-text-css" class="svg-text hide" x="100" y="105">75%</text>
-                </svg>
-                <img id="svg-img-css" class="svg-img" src="css.png" alt="">
-            </div>
-            <div class="container-svg" id="container-svg-react">
-                <svg id="svg-react" class="svg" viewBox="0 0 200 200">
-                    <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
-                    <circle cx="100" cy="100" r="70" class="svg-circle-fill react" transform="rotate(-35 100 100)"/>
-                    <text id="svg-text-react" class="svg-text hide" x="100" y="105">50%</text>
-                </svg>
-                <img id="svg-img-react" class="svg-img" src="react.png" alt="">
-            </div>
-            <div class="container-svg" id="container-svg-threejs">
-                <svg id="svg-threejs" class="svg" viewBox="0 0 200 200">
-                    <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
-                    <circle cx="100" cy="100" r="70" class="svg-circle-fill threejs" transform="rotate(-35 100 100)"/>
-                    <text id="svg-text-threejs" class="svg-text hide" x="100" y="105">50%</text>
-                </svg>
-                <img id="svg-img-threejs" class="svg-img" src="threejs.png" alt="">
-            </div>
-            <div class="container-svg" id="container-svg-mongo">
-                <svg id="svg-mongo" class="svg" viewBox="0 0 200 200">
-                    <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
-                    <circle cx="100" cy="100" r="70" class="svg-circle-fill mongo" transform="rotate(-35 100 100)"/>
-                    <text id="svg-text-mongo" class="svg-text hide" x="100" y="105">50%</text>
-                </svg>
-                <img id="svg-img-mongo" class="svg-img" src="mongo.png" alt="">
-            </div>
-            <div class="container-svg" id="container-svg-json">
-                <svg id="svg-json" class="svg" viewBox="0 0 200 200">
-                    <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
-                    <circle cx="100" cy="100" r="70" class="svg-circle-fill json" transform="rotate(-35 100 100)"/>
-                    <text id="svg-text-json" class="svg-text hide" x="100" y="105">60%</text>
-                </svg>
-                <img id="svg-img-json" class="svg-img" src="json.png" alt="">
-            </div>
-            <div class="container-svg" id="container-svg-git">
-                <svg id="svg-git" class="svg" viewBox="0 0 200 200">
-                    <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
-                    <circle cx="100" cy="100" r="70" class="svg-circle-fill git" transform="rotate(-35 100 100)"/>
-                    <text id="svg-text-git" class="svg-text hide" x="100" y="105">90%</text>
-                </svg>
-                <img id="svg-img-git" class="svg-img" src="git.png" alt="">
-            </div>
-            <div class="container-svg" id="container-svg-github">
-                <svg id="svg-github" class="svg" viewBox="0 0 200 200">
-                    <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
-                    <circle cx="100" cy="100" r="70" class="svg-circle-fill github" transform="rotate(-35 100 100)"/>
-                    <text id="svg-text-github" class="svg-text hide" x="100" y="105">90%</text>
-                </svg>
-                <img id="svg-img-github" class="svg-img" src="github-white.png" alt="">
-            </div>            
-        </div>
-    </div>
-    <div id="projects" class="projects">
-        <p id="projects-title" class="projects-title">MY PROJECTS</p>
-        <div class="container-projects">
-            <div id="container-project-1" class="container-project">
-                <div id="window-filter-1" class="project-window-filter hide"></div>
-                <div id="project-1-window" class="project-window hide">
-                    <img class="project-window-img" src="landingpage-back.png" alt="landing page">
-                    <div class="project-window-text">
-                        <p id="btn-x-1" class="x">X</p>
-                        <p class="project-window-title">LANDINING PAGE</p>
-                        <p class="project-window-description">We specialize in crafting high-quality landing pages designed to communicate your message clearly and convert visitors into customers. Our process goes beyond simple design — we carefully plan the structure, user flow, and visual hierarchy to ensure every section serves a purpose and guides the user toward action.
-                            From modern, visually appealing layouts to clean and maintainable code, we invest significant effort into every detail. We optimize performance, responsiveness, and accessibility to guarantee a seamless experience across all devices and screen sizes.
-                            Our team focuses on combining design, strategy, and functionality to deliver landing pages that not only look professional but also perform effectively. Every project is built with precision, attention to detail, and a strong commitment to helping your business achieve measurable results,And we invite you to explore some of our projects : 
-                        </p>
-                        <div class="project-window-example">
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                        </div>
-                    </div>
+            <div id="container-exp" class="container-exp">
+                <div class="container-exp-5y">
+                    <p>5+</p>
+                    <p>YEARS EXPERIENCE</p>
                 </div>
-                <div id="projects-1" class="projects-1">
-                    <div id="container-project-img-1" class="container-project-img">
-                        <img src="landingpage.png" alt="" class="project-img">
-                        <div id="filter1" class="hide"></div>
-                        <p id="see-more1" class="hide">See more</p>
-                    </div>
-                    <div>
-                        <p class="projects-containers-title">Landing Page</p>
-                        <p class="projects-containers-text">We design and build high-quality landing pages for products and services.
-                            Each page is responsive, fast, and focused on user experience.
-                            Our goal is to create engaging pages that drive results.
-                        </p>
-                        <div class="projects-containers-skills">
-                            <p>HTML5&CSS3</p>
-                            <p>GSAP</p>
-                            <p>JAVASCRIPT</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="container-project-2" class="container-project">
-                <div id="window-filter-2" class="project-window-filter hide"></div>
-                <div id="project-2-window" class="project-window hide">
-                    <img class="project-window-img" src="dashboard-back.png" alt="landing page">
-                    <div class="project-window-text">
-                        <p id="btn-x-2" class="x">X</p>
-                        <p class="project-window-title">DASHBOARD</p>
-                        <p class="project-window-description">Our dashboards are built to transform complex data into clear, actionable insights. We carefully design each interface with a focus on usability, ensuring that users can navigate, analyze, and manage information with ease.
-                            From structuring data flows to implementing interactive components, we invest significant effort into performance, responsiveness, and clarity. Every detail is refined to deliver a smooth and efficient experience across all devices.
-                            We combine thoughtful design with solid development practices to create dashboards that are both powerful and intuitive, helping businesses make informed decisions with confidence. And we invite you to explore some of our projects.
-                        </p>
-                        <div class="project-window-example">
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                        </div>
-                    </div>
-                </div>
-                <div id="projects-2" class="projects-2">
-                    <div id="container-project-img-2" class="container-project-img">
-                        <img src="dashboard.png" alt="" class="project-img">
-                        <div id="filter2" class="hide"></div>
-                        <p id="see-more2" class="hide">See more</p>
-                    </div>
-                    <div>
-                        <p class="projects-containers-title">Dashboard</p>
-                        <p class="projects-containers-text">We builds modern dashboards to manage and visualize data efficiently.
-                            Each dashboard is fast, responsive, and user-friendly.
-                            We focus on delivering clear insights and a smooth experience.
-                        </p>
-                        <div class="projects-containers-skills">
-                            <p>NODE.JS</p>
-                            <p>CHART.JS</p>
-                            <p>SQL</p>
-                            <p>+2</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="container-project-3" class="container-project">
-                <div id="window-filter-3" class="project-window-filter hide"></div>
-                <div id="project-3-window" class="project-window hide">
-                    <img class="project-window-img" src="portfolio-back.png" alt="landing page">
-                    <div class="project-window-text">
-                        <p id="btn-x-3" class="x">X</p>
-                        <p class="project-window-title">PORTFOLIO</p>
-                        <p class="project-window-description">Our portfolio websites are crafted to help creatives, professionals, and businesses present their work with clarity and confidence. We focus on building a strong visual identity that reflects your style while making your projects stand out.
-                            From layout structure to smooth interactions, we invest careful effort into design, performance, and responsiveness to ensure a seamless experience on all devices. Every detail is refined to highlight your skills and leave a lasting impression.
-                            We combine modern design with clean development to deliver portfolios that elevate your personal brand and attract opportunities. And we invite you to explore some of our projects:
-                        </p>
-                        <div class="project-window-example">
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                            <p class="project-example">example</p>
-                        </div>
-                    </div>
-                </div>
-                <div id="projects-3" class="projects-3">
-                    <div id="container-project-img-3" class="container-project-img">
-                        <img src="portfolio.png" alt="" class="project-img">
-                        <div id="filter3" class="hide"></div>
-                        <p id="see-more3" class="hide">See more</p>
-                    </div>
-                    <div>
-                        <p class="projects-containers-title">Portfolio</p>
-                        <p class="projects-containers-text">We create professional portfolio websites to showcase skills and projects effectively.
-                            Each portfolio is responsive, modern, and easy to navigate.
-                            Our goal is to highlight your work with clarity and impact.
-                        </p>
-                        <div class="projects-containers-skills">
-                            <p>REACT</p>
-                            <p>GSAP</p>
-                            <p>HTML5&CSS3</p>
-                            
-                        </div>
-                    </div>
+                <div class="container-exp-40p">
+                    <P>40+</P>
+                    <P>PROJECTS COMPLETED</P>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="contact" class="contact">
-        <div class="contact-info">
-            <p class="contact-info-me">Let's build something extraordinary together.</p>
-            <p class="contact-info-title">Email</p>
-            <p id="my-email" class="contact-info-content contact-info-content-link">hamedeveloperdz@gmail.com</p>
-            <p class="contact-info-title">Phone</p>
-            <p id="my-phone" class="contact-info-content contact-info-content-link">+2136-60-36-15-80</p>
-            <p class="contact-info-title">LOCATION</p>
-            <p id="my-location" class="contact-info-content">BATNA , ALGERIA</p>
-            <div class="social-media">
-                <div id="github-social-media-icon" class="container-social-media-img">
-                    <img class="social-media-img" id="github-white" src="github-white.png" alt="github">
-                    <img class="hide" id="github-red" src="github-red.png" alt="github">
+        <div id="skills" class="skills">
+            <p id="skills-title" class="skills-title">TECHNICAL PROFICIENCY</p>
+            <div class="container-skills" >
+                <div class="container-svg" id="container-svg-python">
+                    <svg id="svg-python" class="svg" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
+                        <circle cx="100" cy="100" r="70" class="svg-circle-fill python" transform="rotate(-35 100 100)"/>
+                        <text id="svg-text-python" class="svg-text hide" x="100" y="105">85%</text>
+                    </svg>
+                    <img id="svg-img-python" class="svg-img" src="python.png" alt="">
                 </div>
-                <div id="linkedin-social-media-icon" class="container-social-media-img">
-                    <img class="social-media-img" id="linkedin-white" src="linkedin-white.png" alt="linkedin">
-                    <img class="hide" id="linkedin-red" src="linkedin-red.png" alt="linkedin">
+                <div class="container-svg" id="container-svg-django">
+                    <svg id="svg-django" class="svg" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
+                        <circle cx="100" cy="100" r="70" class="svg-circle-fill django" transform="rotate(-35 100 100)"/>
+                        <text id="svg-text-django" class="svg-text hide" x="100" y="105">60%</text>
+                    </svg>
+                    <img id="svg-img-django" class="svg-img" src="django.png" alt="">
                 </div>
-                <div id="instagram-social-media-icon" class="container-social-media-img">
-                    <img class="social-media-img" id="instagram-white" src="instagram-white.png" alt="instagram">
-                    <img class="hide" id="instagram-red" src="instagram-red.png" alt="instagram">
+                <div class="container-svg" id="container-svg-js">
+                    <svg id="svg-js" class="svg" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
+                        <circle cx="100" cy="100" r="70" class="svg-circle-fill js" transform="rotate(-35 100 100)"/>
+                        <text id="svg-text-js" class="svg-text hide" x="100" y="105">90%</text>
+                    </svg>
+                    <img id="svg-img-js" class="svg-img" src="js.png" alt="">
                 </div>
-                <div id="tiktok-social-media-icon" class="container-social-media-img">
-                    <img class="social-media-img" id="tiktok-white" src="tiktok-white.png" alt="tiktok">
-                    <img class="hide" id="tiktok-red" src="tiktok-red.png" alt="tiktok">
+                <div class="container-svg" id="container-svg-css">
+                    <svg id="svg-css" class="svg" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
+                        <circle cx="100" cy="100" r="70" class="svg-circle-fill css" transform="rotate(-35 100 100)"/>
+                        <text id="svg-text-css" class="svg-text hide" x="100" y="105">75%</text>
+                    </svg>
+                    <img id="svg-img-css" class="svg-img" src="css.png" alt="">
+                </div>
+                <div class="container-svg" id="container-svg-react">
+                    <svg id="svg-react" class="svg" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
+                        <circle cx="100" cy="100" r="70" class="svg-circle-fill react" transform="rotate(-35 100 100)"/>
+                        <text id="svg-text-react" class="svg-text hide" x="100" y="105">50%</text>
+                    </svg>
+                    <img id="svg-img-react" class="svg-img" src="react.png" alt="">
+                </div>
+                <div class="container-svg" id="container-svg-threejs">
+                    <svg id="svg-threejs" class="svg" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
+                        <circle cx="100" cy="100" r="70" class="svg-circle-fill threejs" transform="rotate(-35 100 100)"/>
+                        <text id="svg-text-threejs" class="svg-text hide" x="100" y="105">50%</text>
+                    </svg>
+                    <img id="svg-img-threejs" class="svg-img" src="threejs.png" alt="">
+                </div>
+                <div class="container-svg" id="container-svg-mongo">
+                    <svg id="svg-mongo" class="svg" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
+                        <circle cx="100" cy="100" r="70" class="svg-circle-fill mongo" transform="rotate(-35 100 100)"/>
+                        <text id="svg-text-mongo" class="svg-text hide" x="100" y="105">50%</text>
+                    </svg>
+                    <img id="svg-img-mongo" class="svg-img" src="mongo.png" alt="">
+                </div>
+                <div class="container-svg" id="container-svg-json">
+                    <svg id="svg-json" class="svg" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
+                        <circle cx="100" cy="100" r="70" class="svg-circle-fill json" transform="rotate(-35 100 100)"/>
+                        <text id="svg-text-json" class="svg-text hide" x="100" y="105">60%</text>
+                    </svg>
+                    <img id="svg-img-json" class="svg-img" src="json.png" alt="">
+                </div>
+                <div class="container-svg" id="container-svg-git">
+                    <svg id="svg-git" class="svg" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
+                        <circle cx="100" cy="100" r="70" class="svg-circle-fill git" transform="rotate(-35 100 100)"/>
+                        <text id="svg-text-git" class="svg-text hide" x="100" y="105">90%</text>
+                    </svg>
+                    <img id="svg-img-git" class="svg-img" src="git.png" alt="">
+                </div>
+                <div class="container-svg" id="container-svg-github">
+                    <svg id="svg-github" class="svg" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="70" class="svg-circle-main" transform="rotate(-35 100 100)"/>
+                        <circle cx="100" cy="100" r="70" class="svg-circle-fill github" transform="rotate(-35 100 100)"/>
+                        <text id="svg-text-github" class="svg-text hide" x="100" y="105">90%</text>
+                    </svg>
+                    <img id="svg-img-github" class="svg-img" src="github-white.png" alt="">
+                </div>            
+            </div>
+        </div>
+        <div id="projects" class="projects">
+            <p id="projects-title" class="projects-title">MY PROJECTS</p>
+            <div class="container-projects">
+                <div id="container-project-1" class="container-project">
+                    <div id="window-filter-1" class="project-window-filter hide"></div>
+                    <div id="project-1-window" class="project-window hide">
+                        <img class="project-window-img" src="landingpage-back.png" alt="landing page">
+                        <div class="project-window-text">
+                            <p id="btn-x-1" class="x">X</p>
+                            <p class="project-window-title">LANDINING PAGE</p>
+                            <p class="project-window-description">We specialize in crafting high-quality landing pages designed to communicate your message clearly and convert visitors into customers. Our process goes beyond simple design — we carefully plan the structure, user flow, and visual hierarchy to ensure every section serves a purpose and guides the user toward action.
+                                From modern, visually appealing layouts to clean and maintainable code, we invest significant effort into every detail. We optimize performance, responsiveness, and accessibility to guarantee a seamless experience across all devices and screen sizes.
+                                Our team focuses on combining design, strategy, and functionality to deliver landing pages that not only look professional but also perform effectively. Every project is built with precision, attention to detail, and a strong commitment to helping your business achieve measurable results,And we invite you to explore some of our projects : 
+                            </p>
+                            <div class="project-window-example">
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="projects-1" class="projects-1">
+                        <div id="container-project-img-1" class="container-project-img">
+                            <img src="landingpage.png" alt="" class="project-img">
+                            <div id="filter1" class="hide"></div>
+                            <p id="see-more1" class="hide">See more</p>
+                        </div>
+                        <div class="container-project-infos">
+                            <p class="projects-containers-title">Landing Page</p>
+                            <p class="projects-containers-text">We design and build high-quality landing pages for products and services.
+                                Each page is responsive, fast, and focused on user experience.
+                                Our goal is to create engaging pages that drive results.
+                            </p>
+                            <div class="projects-containers-skills">
+                                <p>HTML5&CSS3</p>
+                                <p>GSAP</p>
+                                <p>JAVASCRIPT</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container-project-2" class="container-project">
+                    <div id="window-filter-2" class="project-window-filter hide"></div>
+                    <div id="project-2-window" class="project-window hide">
+                        <img class="project-window-img" src="dashboard-back.png" alt="landing page">
+                        <div class="project-window-text">
+                            <p id="btn-x-2" class="x">X</p>
+                            <p class="project-window-title">DASHBOARD</p>
+                            <p class="project-window-description">Our dashboards are built to transform complex data into clear, actionable insights. We carefully design each interface with a focus on usability, ensuring that users can navigate, analyze, and manage information with ease.
+                                From structuring data flows to implementing interactive components, we invest significant effort into performance, responsiveness, and clarity. Every detail is refined to deliver a smooth and efficient experience across all devices.
+                                We combine thoughtful design with solid development practices to create dashboards that are both powerful and intuitive, helping businesses make informed decisions with confidence. And we invite you to explore some of our projects.
+                            </p>
+                            <div class="project-window-example">
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="projects-2" class="projects-2">
+                        <div id="container-project-img-2" class="container-project-img">
+                            <img src="dashboard.png" alt="" class="project-img">
+                            <div id="filter2" class="hide"></div>
+                            <p id="see-more2" class="hide">See more</p>
+                        </div>
+                        <div class="container-project-infos">
+                            <p class="projects-containers-title">Dashboard</p>
+                            <p class="projects-containers-text">We builds modern dashboards to manage and visualize data efficiently.
+                                Each dashboard is fast, responsive, and user-friendly.
+                                We focus on delivering clear insights and a smooth experience.
+                            </p>
+                            <div class="projects-containers-skills">
+                                <p>NODE.JS</p>
+                                <p>CHART.JS</p>
+                                <p>SQL</p>
+                                <p>+2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container-project-3" class="container-project">
+                    <div id="window-filter-3" class="project-window-filter hide"></div>
+                    <div id="project-3-window" class="project-window hide">
+                        <img class="project-window-img" src="portfolio-back.png" alt="landing page">
+                        <div class="project-window-text">
+                            <p id="btn-x-3" class="x">X</p>
+                            <p class="project-window-title">PORTFOLIO</p>
+                            <p class="project-window-description">Our portfolio websites are crafted to help creatives, professionals, and businesses present their work with clarity and confidence. We focus on building a strong visual identity that reflects your style while making your projects stand out.
+                                From layout structure to smooth interactions, we invest careful effort into design, performance, and responsiveness to ensure a seamless experience on all devices. Every detail is refined to highlight your skills and leave a lasting impression.
+                                We combine modern design with clean development to deliver portfolios that elevate your personal brand and attract opportunities. And we invite you to explore some of our projects:
+                            </p>
+                            <div class="project-window-example">
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                                <p class="project-example">example</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="projects-3" class="projects-3">
+                        <div id="container-project-img-3" class="container-project-img">
+                            <img src="portfolio.png" alt="" class="project-img">
+                            <div id="filter3" class="hide"></div>
+                            <p id="see-more3" class="hide">See more</p>
+                        </div>
+                        <div class="container-project-infos">
+                            <p class="projects-containers-title">Portfolio</p>
+                            <p class="projects-containers-text">We create professional portfolio websites to showcase skills and projects effectively.
+                                Each portfolio is responsive, modern, and easy to navigate.
+                                Our goal is to highlight your work with clarity and impact.
+                            </p>
+                            <div class="projects-containers-skills">
+                                <p>REACT</p>
+                                <p>GSAP</p>
+                                <p>HTML5&CSS3</p>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="contact-form" class="contact-form">
-            <input id="inpName" type="text" placeholder="Full Name" required>
-            <div class="bar"></div>
-            <input id="inpEmail" type="text" placeholder="Your Email" required>
-            <div class="bar"></div>
-            <textarea id="inpMessage" placeholder="Message" required></textarea>
-            <div class="bar"></div>
-            <button id="btnSendMessage">SEND MESSAGE</button>
+        <div id="contact" class="contact">
+            <div class="contact-info">
+                <p class="contact-info-me">Let's build something extraordinary together.</p>
+                <p class="contact-info-title">Email</p>
+                <p id="my-email" class="contact-info-content contact-info-content-link">hamedeveloperdz@gmail.com</p>
+                <p class="contact-info-title">Phone</p>
+                <p id="my-phone" class="contact-info-content contact-info-content-link">+2136-60-36-15-80</p>
+                <p class="contact-info-title">LOCATION</p>
+                <p id="my-location" class="contact-info-content">BATNA , ALGERIA</p>
+                <div class="social-media">
+                    <div id="github-social-media-icon" class="container-social-media-img">
+                        <img class="social-media-img" id="github-white" src="github-white.png" alt="github">
+                        <img class="hide" id="github-red" src="github-red.png" alt="github">
+                    </div>
+                    <div id="linkedin-social-media-icon" class="container-social-media-img">
+                        <img class="social-media-img" id="linkedin-white" src="linkedin-white.png" alt="linkedin">
+                        <img class="hide" id="linkedin-red" src="linkedin-red.png" alt="linkedin">
+                    </div>
+                    <div id="instagram-social-media-icon" class="container-social-media-img">
+                        <img class="social-media-img" id="instagram-white" src="instagram-white.png" alt="instagram">
+                        <img class="hide" id="instagram-red" src="instagram-red.png" alt="instagram">
+                    </div>
+                    <div id="tiktok-social-media-icon" class="container-social-media-img">
+                        <img class="social-media-img" id="tiktok-white" src="tiktok-white.png" alt="tiktok">
+                        <img class="hide" id="tiktok-red" src="tiktok-red.png" alt="tiktok">
+                    </div>
+                </div>
+            </div>
+            <div id="contact-form" class="contact-form">
+                <input id="inpName" type="text" placeholder="Full Name" required>
+                <div class="bar"></div>
+                <input id="inpEmail" type="text" placeholder="Your Email" required>
+                <div class="bar"></div>
+                <textarea id="inpMessage" placeholder="Message" required></textarea>
+                <div class="bar"></div>
+                <button id="btnSendMessage">SEND MESSAGE</button>
+            </div>
         </div>
     </div>
     <footer>

@@ -1,7 +1,7 @@
-
 import gsap from '/gsap/index.js';
 import ScrollTrigger from '/gsap/ScrollTrigger.js';
 gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.normalizeScroll(false); 
 
 
 const logoWhite = document.getElementById('logo-white');
@@ -17,6 +17,9 @@ const github = document.getElementById('github');
 const linkedin = document.getElementById('linkedin');
 const instagram = document.getElementById('instagram');
 const tiktok = document.getElementById('tiktok');
+
+
+
 
 // logo button :
 
