@@ -311,6 +311,9 @@ a {
 }
 .container-project-img:hover{
     cursor: pointer;
+    
+}
+.red-shadow{
     box-shadow: 1px 1px 10px red;
 }
 .filter{
@@ -558,7 +561,7 @@ a {
     cursor: pointer;
 }
 .social-media-img{
-    width: 2.8vw;
+    width: 100%;
     opacity: 0.8;
 }
 .footer-data{
@@ -640,8 +643,11 @@ a {
         text-align: center;
         padding: 6vw;
     }
-    .navLinks-hamburger li:hover{
-        background: var(--writing-1);
+    .red{
+        background: var(--writing-1) !important; 
+    }
+    .red-color{
+        color:var(--writing-1) !important ;
     }
     .social-media-hamburger{
         display: flex;
@@ -670,6 +676,9 @@ a {
     .btn-hero{
         font-size: 7vw;
     }
+    .btn-hero:hover{
+        background: transparent;
+    }
     .hero-img-phone{
         display: block;
         width: 100%;
@@ -692,6 +701,10 @@ a {
     transform: translate(-50%, -50%);
     height: 10.5vw;
     font-size: 8vw;
+    }
+    .go-back:hover{
+        background: #acacac3b;
+        color:var(--writing-2)
     }
     .about{
         display: flex;
@@ -768,6 +781,9 @@ a {
         gap: 20vw;
         width: 90vw;
     }
+    .projects-containers-title:hover{
+        color: var(--writing-2);
+    }
     .container-project-img{
     width: 90vw;
     height: 90vw;
@@ -798,11 +814,14 @@ a {
     .contact-info-content{
         font-size: 6vw;
     }
+    .contact-info-content-link:hover{
+    color: var(--writing-2);
+    }
     .social-media{
-        gap: 10vw;
+        grid-template-columns: repeat(4,10vw);
+        gap: 6vw;
     }
     .social-media-img{
-        width: 10vw;
         margin-top: 7vw;
     }
     .contact-form{
@@ -820,6 +839,9 @@ a {
     }
     .footer-data p{
         font-size: 6vw;
+    }
+    .footer-data p:nth-child(2):hover{
+    color: var(--writing-2);
     }
 
 }

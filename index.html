@@ -32,14 +32,14 @@
             <img src="images/menu.png" alt="menu">
         </div>
     </div>
-    <div class="navBar-hamburger-filter hide"></div>
-    <div class="navBar-hamburger hide">
+    <div id="navBar-hamburger-filter" class="hide"></div>
+    <div id="navBar-hamburger" class="hide">
         <nav>
             <ul class="navLinks-hamburger">
-                <li>ABOUT</li>
-                <li>SKILLS</li>
-                <li>PROJECTS</li>
-                <li>CONTACT</li>
+                <li id="about-hamburger">ABOUT</li>
+                <li id="skills-hamburger">SKILLS</li>
+                <li id="projects-hamburger">PROJECTS</li>
+                <li id="contact-hamburger">CONTACT</li>
             </ul>
         </nav>
         <div class="social-media-hamburger">
@@ -67,8 +67,8 @@
                 <h1>ASURA</h1>
                 <p>FULL STACK WEB DEVELOPER</p>
             </div>
-            <div class="btn-hero">
-                    <p>CONTACT ME</p>
+            <div id="btn-hero" class="btn-hero">
+                <p>CONTACT ME</p>
             </div>  
         </div>
         <div class="container-hero-img">
@@ -77,7 +77,7 @@
         </div>
     </div>
     <div>
-        <button id="btn-go-back" class="go-back hide">↑</button>
+        <button id="btn-go-back" class="hide">↑</button>
     </div>
     <div class="content">
         <div id="about" class="about">
@@ -217,7 +217,7 @@
                             <p id="see-more1" class="hide">See more</p>
                         </div>
                         <div class="container-project-infos">
-                            <p class="projects-containers-title">Landing Page</p>
+                            <p id="projects-containers-title-1" class="projects-containers-title">Landing Page</p>
                             <p class="projects-containers-text">We design and build high-quality landing pages for products and services.
                                 Each page is responsive, fast, and focused on user experience.
                                 Our goal is to create engaging pages that drive results.
@@ -262,7 +262,7 @@
                             <p id="see-more2" class="hide">See more</p>
                         </div>
                         <div class="container-project-infos">
-                            <p class="projects-containers-title">Dashboard</p>
+                            <p id="projects-containers-title-2" class="projects-containers-title">Dashboard</p>
                             <p class="projects-containers-text">We builds modern dashboards to manage and visualize data efficiently.
                                 Each dashboard is fast, responsive, and user-friendly.
                                 We focus on delivering clear insights and a smooth experience.
@@ -308,7 +308,7 @@
                             <p id="see-more3" class="hide">See more</p>
                         </div>
                         <div class="container-project-infos">
-                            <p class="projects-containers-title">Portfolio</p>
+                            <p id="projects-containers-title-3" class="projects-containers-title">Portfolio</p>
                             <p class="projects-containers-text">We create professional portfolio websites to showcase skills and projects effectively.
                                 Each portfolio is responsive, modern, and easy to navigate.
                                 Our goal is to highlight your work with clarity and impact.
@@ -366,7 +366,7 @@
     <footer>
         <div class="footer-data">
             <p>©2026 - Asura . All rights reserved</p>
-            <p><a href="#hero">BACK TO TOP</a></p>
+            <p id="footer-btn">BACK TO TOP</p>
         </div>
         <script type="module" src="main.js"></script>
     </footer>

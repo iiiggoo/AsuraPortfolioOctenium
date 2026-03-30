@@ -17,38 +17,138 @@ const github = document.getElementById('github');
 const linkedin = document.getElementById('linkedin');
 const instagram = document.getElementById('instagram');
 const tiktok = document.getElementById('tiktok');
+const btnMenu = document.getElementById('hamburger');
+const menu = document.getElementById('navBar-hamburger');
+const filterMenu = document.getElementById('navBar-hamburger-filter');
 
 
-
+// hamburger links click :
+function redBackGround (btnId,section){
+    const btn = document.getElementById(btnId);
+    btn.ontouchstart = function(){
+        btn.className = 'red';
+    }
+    btn.ontouchend = function(){
+        btn.className = ''
+    }
+    btn.onclick = function(){
+        location.href = `#${section}`
+        gsap.to(menu,{
+            x:150,
+            duration:0.5,
+            opacity:0,
+            onComplete: function(){
+                menu.className = 'hide';
+                
+                gsap.set(menu, {clearProps: 'all'}); // this is for clearing the gsap data from the element 
+            }
+        })
+        filterMenu.className = 'hide';
+    }
+}
+redBackGround('about-hamburger','about');
+redBackGround('skills-hamburger','skills');
+redBackGround('projects-hamburger','projects');
+redBackGround('contact-hamburger','contact');
 
 // logo button :
+if(window.innerWidth >= 440){
+    logoWhite.onmouseenter= function(){    
+        logoWhite.setAttribute('class','hide');
+        logoRed.setAttribute('class','logo');
+    }
+    logoRed.onmouseleave = function(){
+        logoRed.setAttribute('class','hide')
+        logoWhite.setAttribute('class','logo')
+    }
+}else{
+    logoWhite.ontouchstart = function (){
+        logoWhite.setAttribute('class','hide');
+        logoRed.setAttribute('class','logo');
+    }
+    logoWhite.ontouchend =function (){
+        logoRed.setAttribute('class','hide')
+        logoWhite.setAttribute('class','logo')
+    }
+}
 
-logoWhite.onmouseenter= function(){
-    logoWhite.setAttribute('class','hide');
-    logoRed.setAttribute('class','logo')
-}
-logoRed.onmouseleave = function(){
-    logoRed.setAttribute('class','hide')
-    logoWhite.setAttribute('class','logo')
-}
 logoRed.onclick = function(){
     location.reload()
 }
+logoWhite.onclick = function(){
+    location.reload()
+}
 
-
-
+// hamburger button : 
+btnMenu.onclick = function(){
+    if(menu.className == 'hide' && filterMenu.className == 'hide'){
+        filterMenu.className = 'navBar-hamburger-filter';
+        menu.className = 'navBar-hamburger';
+        gsap.from(menu,{
+            x:150,
+            duration:0.5,
+            opacity:0,
+        })
+    }else{
+        gsap.to(menu,{
+            x:150,
+            duration:0.5,
+            opacity:0,
+            onComplete: function(){
+                menu.className = 'hide';
+                gsap.set(menu, {clearProps: 'all'}); // this is for clearing the gsap data from the element 
+            }
+        })
+        filterMenu.className = 'hide';
+    }
+}
+//hero button : 
+const btnHero = document.getElementById('btn-hero');
+if(window.innerWidth >= 440){
+    btnHero.onclick = function (){
+        location.href = '#contact'
+    }
+}else{
+    btnHero.onclick = function (){
+        location.href = '#contact'
+    }
+    btnHero.ontouchstart = function(){
+        btnHero.className = 'btn-hero red'
+    }
+    btnHero.ontouchend = function(){
+        btnHero.className = 'btn-hero'
+    }
+}
 // scrolling Button :  
 
 onscroll = function(){
-    if(this.scrollY > 1065 && this.scrollY < 3960){
-        btnGoBack.setAttribute('class','go-back')
+    if(window.innerWidth >= 440){
+        if(this.scrollY > 1065 && this.scrollY < 3960){
+            btnGoBack.setAttribute('class','go-back')
+        }else{
+            btnGoBack.setAttribute('class','hide')
+        };
+        btnGoBack.onclick = function(){
+            location.href = '#hero'
+        }
     }else{
-        btnGoBack.setAttribute('class','hide')
+        if(this.scrollY > 500 && this.scrollY < 5510){
+            btnGoBack.setAttribute('class','go-back')
+        }else{
+            btnGoBack.setAttribute('class','hide')
+        }
+        btnGoBack.ontouchstart = function(){
+            btnGoBack.className = 'red go-back'
+        }
+        btnGoBack.ontouchend = function(){
+            btnGoBack.className = 'go-back'
+        }
+        btnGoBack.onclick = function(){
+            location.href = '#hero'
+        }
     }
 }
-btnGoBack.onclick = function(){
-    location.href = '#hero'
-}
+
 // about section animation
 const timeLineAbout = gsap.timeline({scrollTrigger:'#about-title'});
 timeLineAbout.fromTo('#about-title',{x:-100 , opacity:0},{x:0 , opacity:1, duration:1 });
@@ -79,15 +179,18 @@ function projectImgHover (seemore,Filter,containerimg){
     const seeMore = document.getElementById(seemore);
     const filter = document.getElementById(Filter);
     const containerImg = document.getElementById(containerimg)
-    containerImg.onmouseenter = function(){
-        seeMore.setAttribute('class','see-more');
-        filter.setAttribute('class','filter');
-
-    };
-    containerImg.onmouseleave = function(){
-        seeMore.setAttribute('class','hide');
-        filter.setAttribute('class','hide');
-    };
+    if(window.innerWidth >= 440){
+        containerImg.onmouseenter = function(){
+            seeMore.className = 'see-more';
+            filter.className = 'filter';
+            containerImg.className = 'red-shadow container-project-img'
+        };
+        containerImg.onmouseleave = function(){
+            seeMore.className = 'hide';
+            filter.className = 'hide';
+            containerImg.className = 'container-project-img'
+        };
+    }
 }
 projectImgHover('see-more1','filter1','container-project-img-1');
 projectImgHover('see-more2','filter2','container-project-img-2');
@@ -96,8 +199,25 @@ projectImgHover('see-more3','filter3','container-project-img-3');
 
 
 // email and phone click call : 
-myEmail.onclick = function (){location.href = 'mailto:asura@asura-portfolio.com'};
-myPhone.onclick = function (){location.href = 'tel:+213660361580'};
+if(window.innerWidth >= 440){
+    myEmail.onclick = function (){location.href = 'mailto:asura@asura-portfolio.com'};
+    myPhone.onclick = function (){location.href = 'tel:+213660361580'};
+}else{
+    myEmail.ontouchstart = function (){
+        myEmail.className = 'red-color contact-info-content contact-info-content-link';
+    }
+    myPhone.ontouchstart = function (){
+        myPhone.className = 'red-color contact-info-content contact-info-content-link';
+    }
+    myEmail.ontouchend = function (){
+        myEmail.className = 'contact-info-content contact-info-content-link';
+    }
+    myPhone.ontouchend = function (){
+        myPhone.className = 'contact-info-content contact-info-content-link';
+    }
+    myEmail.onclick = function (){location.href = 'mailto:asura@asura-portfolio.com'};
+    myPhone.onclick = function (){location.href = 'tel:+213660361580'};
+}
 
 
 // social media buttons :
@@ -105,29 +225,51 @@ function socialMediaHover(containerImg,imgWhite,imgRed,link){
     const container = document.getElementById(containerImg);
     const whiteIcon = document.getElementById(imgWhite);
     const redIcon = document.getElementById(imgRed);
-    container.onmouseenter = function (){
-        whiteIcon.className = 'hide';
-        redIcon.className = 'social-media-img';
+    if(window.innerWidth >= 440){
+        container.onmouseenter = function (){
+            whiteIcon.className = 'hide';
+            redIcon.className = 'social-media-img';
+        }
+        container.onmouseleave = function (){
+            redIcon.className = 'hide';
+            whiteIcon.className = 'social-media-img';
+        }
+        container.onclick = function(){window.open(`${link}`,'_blank')};
+    }else{
+        container.ontouchstart = function(){
+            whiteIcon.className = 'hide';
+            redIcon.className = 'social-media-img';
+        }
+        container.ontouchend = function(){
+            redIcon.className = 'hide';
+            whiteIcon.className = 'social-media-img';
+        }
+        container.onclick = function(){window.open(`${link}`,'_blank')
     }
-    container.onmouseleave = function (){
-        redIcon.className = 'hide';
-        whiteIcon.className = 'social-media-img';
-    }
-    container.onclick = function(){window.open(`${link}`,'_blank')};
-}
+}}
 socialMediaHover('github-social-media-icon','github-white','github-red','https://github.com/iiiggoo')
 socialMediaHover('linkedin-social-media-icon','linkedin-white','linkedin-red','https://github.com/iiiggoo')
 socialMediaHover('instagram-social-media-icon','instagram-white','instagram-red','https://www.instagram.com/iiig_goo')
 socialMediaHover('tiktok-social-media-icon','tiktok-white','tiktok-red','https://www.tiktok.com/@asura_dev')
 
 // projects galery : 
-function projectClick (imgContainer,projectWindow,windowFilter,btnX){
+function projectClick (imgContainer,titleContainer,projectWindow,windowFilter,btnX){
     const container = document.getElementById(imgContainer);
+    const containerTitle = document.getElementById(titleContainer)
     const window = document.getElementById(projectWindow);
     const filter = document.getElementById(windowFilter);
     const x = document.getElementById(btnX);
 
     container.onclick = function(){
+        filter.className = 'project-window-filter';
+        gsap.from(window,{
+            scaleX:0.9,
+            duration:1,
+            opacity:0,
+        })
+        window.className = 'project-window';
+    };
+    containerTitle.onclick = function(){
         filter.className = 'project-window-filter';
         gsap.from(window,{
             scaleX:0.9,
@@ -145,9 +287,9 @@ function projectClick (imgContainer,projectWindow,windowFilter,btnX){
         filter.className = 'hide';        
     };
 }
-projectClick('container-project-img-1','project-1-window','window-filter-1','btn-x-1');
-projectClick('container-project-img-2','project-2-window','window-filter-2','btn-x-2');
-projectClick('container-project-img-3','project-3-window','window-filter-3','btn-x-3');
+projectClick('container-project-img-1','projects-containers-title-1','project-1-window','window-filter-1','btn-x-1');
+projectClick('container-project-img-2','projects-containers-title-2','project-2-window','window-filter-2','btn-x-2');
+projectClick('container-project-img-3','projects-containers-title-3','project-3-window','window-filter-3','btn-x-3');
 
 // meesage handling : 
 
@@ -195,8 +337,6 @@ btnSendMessage.onclick = function(){
     }
 }
 
-
-
 function addSvgEvent (containerSvgId,svgImgId,svgTextId){
     const container = document.getElementById(containerSvgId);
     const img = document.getElementById(svgImgId)
@@ -220,7 +360,7 @@ function addSvgEvent (containerSvgId,svgImgId,svgTextId){
                 y:0,
                 duration:1,
                 rotateY:0,
-                ease:'none',
+                ease:'none',TO
             })
             text.setAttribute('class','hide')
     }
@@ -258,3 +398,22 @@ addSvgEvent('container-svg-mongo','svg-img-mongo','svg-text-mongo');
 addSvgEvent('container-svg-json','svg-img-json','svg-text-json');
 addSvgEvent('container-svg-git','svg-img-git','svg-text-git');
 addSvgEvent('container-svg-github','svg-img-github','svg-text-github');
+
+// footer go back btn : 
+const btnFooter = document.getElementById('footer-btn');
+if(window.innerWidth >= 440){
+    btnFooter.onclick = function (){
+        location.href = '#hero'
+    }
+}else{
+    btnFooter.onclick = function (){
+        location.href = '#hero'
+    }
+    btnFooter.ontouchstart = function(){
+        btnFooter.className = 'red-color'
+    }
+    btnFooter.ontouchend = function(){
+        btnFooter.className = ''
+    }
+    
+}
