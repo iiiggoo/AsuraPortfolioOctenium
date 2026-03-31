@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@font-face {
+    font-family: 'Deltha';
+    src: url('fonts/Deltha.otf') format('opentype'),
+        url('fonts/Deltha.ttf') format('truetype'),
+}
+@font-face {
+    font-family: Manrope;
+    src: url('fonts/Manrope.ttf') format('truetype')
+}
 :root{
     --font: 'Manrope', sans-serif;
     --background-color: #141414;
@@ -84,6 +93,7 @@ a {
 }
 .logo{
     width: 6vw;
+    font-family: 'Deltha' , sans-serif;
 }
 .navLinks {
     display: flex;
