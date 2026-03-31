@@ -4,8 +4,7 @@ gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.normalizeScroll(false); 
 
 
-const logoWhite = document.getElementById('logo-white');
-const logoRed = document.getElementById('logo-red');
+const logo = document.getElementById('logo');
 const btnGoBack = document.getElementById('btn-go-back');
 const btnSendMessage = document.getElementById('btnSendMessage');
 const inpName = document.getElementById('inpName');
@@ -51,31 +50,22 @@ redBackGround('contact-hamburger','contact');
 
 // logo button :
 if(window.innerWidth >= 440){
-    logoWhite.onmouseenter= function(){    
-        logoWhite.setAttribute('class','hide');
-        logoRed.setAttribute('class','logo');
-    }
-    logoRed.onmouseleave = function(){
-        logoRed.setAttribute('class','hide')
-        logoWhite.setAttribute('class','logo')
+    logo.onclick = function(){
+        location.reload()
     }
 }else{
-    logoWhite.ontouchstart = function (){
-        logoWhite.setAttribute('class','hide');
-        logoRed.setAttribute('class','logo');
+    logo.onclick = function(){
+        location.reload()
     }
-    logoWhite.ontouchend =function (){
-        logoRed.setAttribute('class','hide')
-        logoWhite.setAttribute('class','logo')
+    logo.ontouchstart = function(){
+        logo.className = 'red-color logo'
+    }
+    logo.ontouchend = function (){
+        logo.className = 'logo'
     }
 }
 
-logoRed.onclick = function(){
-    location.reload()
-}
-logoWhite.onclick = function(){
-    location.reload()
-}
+
 
 // hamburger button : 
 btnMenu.onclick = function(){
@@ -456,7 +446,6 @@ function addSvgEvent (containerSvgId,svgImgId,svgTextId){
             }
         })
 }
-    
 
 addSvgEvent('container-svg-python','svg-img-python','svg-text-python');
 addSvgEvent('container-svg-django','svg-img-django','svg-text-django');
