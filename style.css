@@ -597,11 +597,18 @@ a {
         display: none;
     }
     .hamburger {
-        display: block;
-        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        width: 12vw;
+        height: 12vw;
+        border: 1px solid #ffffff38;
+        border-radius: 5px;
+        text-align: center;
+        padding:1% 0.5%;
     }
     .hamburger img{
-        width: 11vw;
+        width: 9vw;
     }
     .logo{
         width:19vw;
@@ -653,10 +660,12 @@ a {
         display: flex;
         flex-direction:row;
         align-items: center;
+        width: 100%;
         gap: 7%;
+        text-align: center;
     }
     .social-media-hamburger-img{
-        width: 9vw;
+        width: 70%;
     }
     .hero-img{
         display: none;

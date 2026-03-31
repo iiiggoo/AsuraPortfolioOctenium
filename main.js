@@ -13,11 +13,9 @@ const inpEmail = document.getElementById('inpEmail');
 const inpMessage = document.getElementById('inpMessage');
 const myEmail = document.getElementById('my-email');
 const myPhone = document.getElementById('my-phone');
-const github = document.getElementById('github');
-const linkedin = document.getElementById('linkedin');
-const instagram = document.getElementById('instagram');
-const tiktok = document.getElementById('tiktok');
 const btnMenu = document.getElementById('hamburger');
+const imgMenu = document.getElementById('hamburger-img-menu');
+const imgMenuX = document.getElementById('hamburger-img-x');
 const menu = document.getElementById('navBar-hamburger');
 const filterMenu = document.getElementById('navBar-hamburger-filter');
 
@@ -84,6 +82,8 @@ btnMenu.onclick = function(){
     if(menu.className == 'hide' && filterMenu.className == 'hide'){
         filterMenu.className = 'navBar-hamburger-filter';
         menu.className = 'navBar-hamburger';
+        imgMenu.className = 'hide'
+        imgMenuX.className = ''
         gsap.from(menu,{
             x:150,
             duration:0.5,
@@ -99,9 +99,57 @@ btnMenu.onclick = function(){
                 gsap.set(menu, {clearProps: 'all'}); // this is for clearing the gsap data from the element 
             }
         })
+        imgMenu.className = ''
+        imgMenuX.className = 'hide'
         filterMenu.className = 'hide';
     }
 }
+filterMenu.onclick = function (){
+    gsap.to(menu,{
+            x:150,
+            duration:0.5,
+            opacity:0,
+            onComplete: function(){
+                menu.className = 'hide';
+                gsap.set(menu, {clearProps: 'all'}); // this is for clearing the gsap data from the element 
+            }
+        })
+        imgMenu.className = ''
+        imgMenuX.className = 'hide'
+        filterMenu.className = 'hide';
+}
+function socialMediaClickHamburger (icon,iconRed,iconWhite,link){
+    const container = document.getElementById(icon);
+    const red = document.getElementById(iconRed);
+    const white = document.getElementById(iconWhite);
+    container.ontouchstart = function(){
+        red.className = 'social-media-hamburger-img';
+        white.className = 'hide'
+    }
+    container.ontouchend = function (){
+        red.className = 'hide'
+        white.className = 'social-media-hamburger-img'
+    }
+    container.onclick = function(){
+        window.open(`${link}`,'_blank')
+        gsap.to(menu,{
+            x:150,
+            duration:0.5,
+            opacity:0,
+            onComplete: function(){
+                menu.className = 'hide';
+                gsap.set(menu, {clearProps: 'all'}); // this is for clearing the gsap data from the element 
+            }
+        })
+        imgMenu.className = ''
+        imgMenuX.className = 'hide'
+        filterMenu.className = 'hide';
+    }
+}
+socialMediaClickHamburger('github-hamburger','githubR-hamburger','githubW-hamburger','https://github.com/iiiggoo')
+socialMediaClickHamburger('linkedin-hamburger','linkedinR-hamburger','linkedinW-hamburger','https://github.com/iiiggoo')
+socialMediaClickHamburger('instagram-hamburger','instagramR-hamburger','instagramW-hamburger','https://www.instagram.com/iiig_goo')
+socialMediaClickHamburger('tiktok-hamburger','tiktokR-hamburger','tiktokW-hamburger','https://www.tiktok.com/@asura_dev')
 //hero button : 
 const btnHero = document.getElementById('btn-hero');
 if(window.innerWidth >= 440){
@@ -266,8 +314,11 @@ function projectClick (imgContainer,titleContainer,projectWindow,windowFilter,bt
             scaleX:0.9,
             duration:1,
             opacity:0,
+            onStart:function(){
+                window.className = 'project-window';
+            }
         })
-        window.className = 'project-window';
+        
     };
     containerTitle.onclick = function(){
         filter.className = 'project-window-filter';
@@ -275,8 +326,10 @@ function projectClick (imgContainer,titleContainer,projectWindow,windowFilter,bt
             scaleX:0.9,
             duration:1,
             opacity:0,
+            onStart:function(){
+                window.className = 'project-window';
+            }
         })
-        window.className = 'project-window';
     };
     x.onclick = function (){
         window.className = 'hide';
@@ -343,51 +396,68 @@ function addSvgEvent (containerSvgId,svgImgId,svgTextId){
     const text = document.getElementById(svgTextId);
     let timer;
     let isClicked = false ;
-    container.onmouseenter = function(){
-        if(isClicked)return;
-            gsap.to(img,{
-                y:-80,
-                duration:1,
-                rotateY:360,
-                ease:'none',
-            })
-            timer = setTimeout(function(){text.setAttribute('class','svg-text')},1000)
-    }
-    container.onmouseleave = function(){
-        if(isClicked)return;
-            clearTimeout(timer);
-            gsap.to(img,{
-                y:0,
-                duration:1,
-                rotateY:0,
-                ease:'none',TO
-            })
-            text.setAttribute('class','hide')
-    }
-    container.onclick = function(){
-        isClicked = true;
-        gsap.to(img,{
-            y:-80,
-            duration:1,
-            rotateY:360,
-            ease:'none',
-        })
-        timer = setTimeout(function(){text.setAttribute('class','svg-text')},1000)
-    }
-    document.addEventListener('click', function(e){
-        if(!container.contains(e.target)){ // this function is for when you click outside the element target container)
-            isClicked = false;
-            clearTimeout(timer);
-            gsap.to(img,{
-                y:0,
-                duration:1,
-                rotateY:0,
-                ease:'none',
-            })
-            text.setAttribute('class','hide')
+    if(window.innerWidth >= 440){
+        container.onmouseenter = function(){
+            if(isClicked == true)return;
+                gsap.to(img,{
+                    y:-80,
+                    duration:1,
+                    rotateY:360,
+                    ease:'none',
+                })
+                timer = setTimeout(function(){text.setAttribute('class','svg-text')},1000)
         }
-    })
+        container.onmouseleave = function(){
+            if(isClicked)return;
+                clearTimeout(timer);
+                gsap.to(img,{
+                    y:0,
+                    duration:1,
+                    rotateY:0,
+                    ease:'none',
+                })
+                text.setAttribute('class','hide')
+        }
+    }else{
+        container.onclick = function(){
+            if(isClicked == false){
+                isClicked = true;
+                gsap.to(img,{
+                    y:-80,
+                    duration:1,
+                    rotateY:360,
+                    ease:'none',
+                })
+                timer = setTimeout(function(){text.setAttribute('class','svg-text')},1000)
+            }else{
+                clearTimeout(timer);
+                isClicked = false;
+                gsap.to(img,{
+                    y:0,
+                    duration:1,
+                    rotateY:0,
+                    ease:'none',
+                })
+                text.setAttribute('class','hide')
+            }
+        }
+    }
+        document.addEventListener('click', function(e){
+            if(!container.contains(e.target)){ // this function is for when you click outside the element target container)
+                isClicked = false;
+                clearTimeout(timer);
+                gsap.to(img,{
+                    y:0,
+                    duration:1,
+                    rotateY:0,
+                    ease:'none',
+                })
+                text.setAttribute('class','hide')
+            }
+        })
 }
+    
+
 addSvgEvent('container-svg-python','svg-img-python','svg-text-python');
 addSvgEvent('container-svg-django','svg-img-django','svg-text-django');
 addSvgEvent('container-svg-js','svg-img-js','svg-text-js');
