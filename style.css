@@ -97,6 +97,7 @@ a {
 .logo{
     font-size: 2vw;
     font-family: 'Deltha' , sans-serif;
+    padding-bottom: 1%;
 }
 .logo:hover{
     color: var(--writing-1);
@@ -108,6 +109,7 @@ a {
     font-weight: lighter;
     font-style: normal;
     padding-right: 30vw;
+    padding-bottom: 1%;
     font-size: 1vw;
     gap: 6vw;
 }
