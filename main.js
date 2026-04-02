@@ -228,6 +228,17 @@ function projectImgHover (seemore,Filter,containerimg){
             filter.className = 'hide';
             containerImg.className = 'container-project-img'
         };
+    }else{
+        containerImg.ontouchstart = function(){
+            seeMore.className = 'see-more';
+            filter.className = 'filter';
+            containerImg.className = 'red-shadow container-project-img'
+        };
+        containerImg.ontouchend = function(){
+            seeMore.className = 'hide';
+            filter.className = 'hide';
+            containerImg.className = 'container-project-img'
+        };
     }
 }
 projectImgHover('see-more1','filter1','container-project-img-1');
@@ -329,6 +340,12 @@ function projectClick (imgContainer,titleContainer,projectWindow,windowFilter,bt
         window.className = 'hide';
         filter.className = 'hide';        
     };
+    x.ontouchstart = function (){
+        x.className = 'x red-shadow red-color'
+    }
+    x.ontouchend = function (){
+        x.className = 'x'
+    }
 }
 projectClick('container-project-img-1','projects-containers-title-1','project-1-window','window-filter-1','btn-x-1');
 projectClick('container-project-img-2','projects-containers-title-2','project-2-window','window-filter-2','btn-x-2');

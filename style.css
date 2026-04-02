@@ -42,6 +42,9 @@ body{
     background-image: url(images/noise.jpg);
     background-repeat: repeat;
 }
+.red-shadow{
+    box-shadow: 1px 1px 10px var(--writing-1);
+}
 ul{
     list-style: none;
 
@@ -328,9 +331,6 @@ a {
     cursor: pointer;
     
 }
-.red-shadow{
-    box-shadow: 1px 1px 10px red;
-}
 .filter{
     position: absolute;
     top:0%;
@@ -386,8 +386,15 @@ a {
     gap: 2%;
     overflow-x: hidden;
 }
+.project-window-img-container{
+    width: 100%;
+    height: 1vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 .project-window-img{
-    width: 25vw;
+    width: 30%;
+    height: 80%;
 }
 .project-window-text{
     display: flex;
@@ -797,6 +804,42 @@ a {
         margin-top: 50vw;
         padding: 0;
         width: 100%;
+    }
+    .see-more{
+        font-size: 4vw;
+    }
+    .project-window{
+        flex-direction: column;
+        width: 90vw;
+        height: 70vh;
+        top:10%;
+        left: 5%;
+    }
+    .project-window-img{
+        width: 50vw;
+        height: auto;
+    }
+    .project-window-title{
+        font-size: 9vw;
+    }
+    .project-window-description{
+        font-size: 3vw;
+    }
+    .project-window-text{
+        width: 90%;
+    }
+    .project-window-example{
+        font-size: 2vw;
+    }
+    .x{
+        top:2%;
+        right:4%;
+        padding:2% 3%;
+        border-radius:1000px ;
+    }
+    .x:hover{
+        color:var(--writing-2);
+        box-shadow: none;
     }
     .projects-1 , .projects-2 , .projects-3{
         width: 100%;
